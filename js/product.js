@@ -7,11 +7,9 @@ deleteButtons.forEach(button => {
     button.addEventListener('click', function(e) {
         // Prevent the default action of the click event (e.g., navigation or form submission)
         e.preventDefault();
-        
         // Get the product name and id from the button's data attributes
         let product = this.dataset.name;
         let productID = this.dataset.id;
-        
         // Ask the user for confirmation to delete the product
         let response = confirm("Do you want to delete the product " + product + "?");
         
@@ -25,8 +23,8 @@ deleteButtons.forEach(button => {
             .then(data => {
                 // If the server responds with 'success'
                 if(data === 'success') {
-                    // Redirect the user to 'product.php'
-                    window.location.href = 'admin/products';
+                   // Redirect the user to 'product.php'
+                    window.location.href = '/RhamGit/admin/products';
                 }
             });
         }

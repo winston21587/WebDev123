@@ -1,4 +1,5 @@
-<div class="container-fluid">
+<div 
+class="container-fluid">
     <div class="row">
         <div class="col-12">
             <div class="page-title-box">
@@ -90,7 +91,7 @@
                                             </span>
                                         </td>
                                         <td class="text-nowrap">
-                                            <a href="../stocks/stocks.php?id=<?= $arr['id'] ?>" class="btn btn-sm btn-outline-primary me-1">Stock In/Out</a>
+                                            <button data-id="<?= $arr['id'] ?>" class="btn btn-sm btn-outline-primary me-1 stockBtn" >Stock In/Out</button>
                                             <a href="" class="btn btn-sm btn-outline-success me-1 edit-product" data-id="<?= $arr['id'] ?>">Edit</a>
                                             <?php if (isset($_SESSION['account']['is_admin']) && $_SESSION['account']['is_admin']) { ?>
                                                 <button class="btn btn-sm btn-outline-danger deleteBtn" data-id="<?= $arr['id'] ?>" data-name="<?= htmlspecialchars($arr['name']) ?>">Delete</button>
@@ -109,3 +110,4 @@
         </div>
     </div>
 </div>
+<script src="../js/product.js" ></script>

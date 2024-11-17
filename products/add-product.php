@@ -1,7 +1,7 @@
 <?php
 
-require_once('../tools/functions.php');
-require_once('../classes/product.class.php');
+require_once '../tools/functions.php';
+require_once '../classes/product.class.php';
 
 $code = $name = $category = $price = '';
 $codeErr = $nameErr = $categoryErr = $priceErr = '';

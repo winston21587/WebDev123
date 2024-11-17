@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $stocksObj->reason = $reason;
 
         if ($stocksObj->add()) {
-            header('Location: product.php');
+            header('Location: RhamGit/admin/product.php');
         } else {
             echo 'Something went wrong when stocking the product';
         }
@@ -142,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         <input type="submit" value="Save Stocks">
     </form>
 
-    <script src="./stocks.js"></script>
+    <script src="../stocks/stocks.js"></script>
 </body>
 
 </html>

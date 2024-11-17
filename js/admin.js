@@ -123,14 +123,19 @@ $(document).ready(function () {
         // Event listener for adding a product
         $("#add-product").on("click", function (e) {
           e.preventDefault(); // Prevent default behavior
-          addProduct(); // Call function to add product
+          addProduct();  //Call function to add product
+
         });
 
-        // Event listener for adding a product
+        // Event listener for adding(*editing*) a product 
         $(".edit-product").on("click", function (e) {
           e.preventDefault(); // Prevent default behavior
-          editProduct(this.dataset.id); // Call function to add product
+          editProduct(this.dataset.id); // Call function to add(*edit*) product
         });
+        
+
+
+
       },
     });
   }
@@ -167,13 +172,11 @@ $(document).ready(function () {
       success: function (view) {
         $(".modal-container").html(view); // Load the modal view
         $("#staticBackdrop").modal("show"); // Show the modal
-
         fetchCategories(); // Load categories for the select input
-
         // Event listener for the add product form submission
-        $("#form-edit-product").on("submit", function (e) {
+        $("#form-add-product").on("submit", function (e) {                 // form ADD product bruh not $("#form-edit-product")
           e.preventDefault(); // Prevent default form submission
-          updateProduct(); // Call function to save product
+          saveProduct(); // Call function to save product
         });
       },
     });
@@ -230,7 +233,7 @@ $(document).ready(function () {
     });
   }
 
-  // Function to save a new product
+  // Function to save(*update*) a new product
   function updateProduct(productId) {
     $.ajax({
       type: "POST", // Use POST request
