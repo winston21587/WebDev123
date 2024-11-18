@@ -91,7 +91,7 @@ class="container-fluid">
                                             </span>
                                         </td>
                                         <td class="text-nowrap">
-                                            <button data-id="<?= $arr['id'] ?>" class="btn btn-sm btn-outline-primary me-1 stockBtn" >Stock In/Out</button>
+                                            <button  data-id="<?= $arr['id'] ?>" data-name="<?= $arr['name'] ?>" class="btn btn-sm btn-outline-primary me-1 stock-product">Stock In/Out</button>
                                             <a href="" class="btn btn-sm btn-outline-success me-1 edit-product" data-id="<?= $arr['id'] ?>">Edit</a>
                                             <?php if (isset($_SESSION['account']['is_admin']) && $_SESSION['account']['is_admin']) { ?>
                                                 <button class="btn btn-sm btn-outline-danger deleteBtn" data-id="<?= $arr['id'] ?>" data-name="<?= htmlspecialchars($arr['name']) ?>">Delete</button>
